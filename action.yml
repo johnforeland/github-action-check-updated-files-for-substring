@@ -1,0 +1,22 @@
+name: Changed file names from PR containing substring
+description: Checks if the file names from a PR contains a given substring
+author: johnforeland
+
+inputs:
+    substring:
+        description: 'Substring to check changed files with'
+        required: true
+
+outputs:
+    allFileNamesContainsSubstring:
+        description: return `true` if all changed file contents contains substring
+    oneOrMoreFileNamesContainsSubstring:
+        description: return `true` if one or more changed file contents contains substring
+
+branding:
+    icon: bar-chart-2
+    color: orange
+
+runs:
+    using: 'node12'
+    main: 'index.js'
